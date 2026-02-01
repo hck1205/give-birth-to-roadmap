@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAtom, useAtomValue } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import ActionButton from "../common/ActionButton";
 import PageLayout from "../common/PageLayout";
 import SectionCard from "../common/SectionCard";
@@ -19,10 +19,12 @@ import { getTrimesterLabel } from "./PregnancyRoadmap.utils";
 import { themeAtom } from "../../atom/themeAtom";
 import {
   activeWeekAtom,
-  filteredWeeksAtom,
+  filteredWeeksByTrimesterAtom,
+  loadWeeksAtom,
   selectedTrimesterAtom,
   selectedWeekAtom,
   weekDrawerOpenAtom,
+  weeksLoadedAtom,
 } from "../../atom/roadmapAtom";
 import { InfoDetailDrawer, WeekDetailDrawer, WeekGrid } from "../roadmap";
 
@@ -33,9 +35,29 @@ export default function PregnancyRoadmap() {
   const [selectedTrimester, setSelectedTrimester] = useAtom(selectedTrimesterAtom);
   const [selectedWeek, setSelectedWeek] = useAtom(selectedWeekAtom);
   const [, setDrawerOpen] = useAtom(weekDrawerOpenAtom);
-  const filteredWeeks = useAtomValue(filteredWeeksAtom);
+  const filteredWeeks = useAtomValue(filteredWeeksByTrimesterAtom);
+  const weeksLoaded = useAtomValue(weeksLoadedAtom);
+  const loadWeeks = useSetAtom(loadWeeksAtom);
   const activeWeek = useAtomValue(activeWeekAtom);
   const toggleTheme = () => setTheme((current) => (current === "light" ? "dark" : "light"));
+
+  useEffect(() => {
+    if (!weeksLoaded) {
+      loadWeeks();
+    }
+  }, [loadWeeks, weeksLoaded]);
+
+  useEffect(() => {
+    if (!weeksLoaded) {
+      return;
+    }
+    setSelectedWeek((current) => {
+      if (!current && filteredWeeks.length) {
+        return filteredWeeks[0].week;
+      }
+      return current;
+    });
+  }, [filteredWeeks, setSelectedWeek, weeksLoaded]);
 
   useEffect(() => {
     if (!filteredWeeks.length) {

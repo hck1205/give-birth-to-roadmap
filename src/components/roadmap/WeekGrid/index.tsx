@@ -1,6 +1,6 @@
 import { useAtomValue, useSetAtom } from "jotai";
 import {
-  filteredWeeksAtom,
+  filteredWeeksByTrimesterAtom,
   selectedWeekAtom,
   weekDrawerOpenAtom,
 } from "../../../atom/roadmapAtom";
@@ -8,7 +8,7 @@ import { WeekGridContainer } from "../layout";
 import { weekComponentMap } from "../weeks";
 
 export default function WeekGrid() {
-  const weeks = useAtomValue(filteredWeeksAtom);
+  const weeks = useAtomValue(filteredWeeksByTrimesterAtom);
   const selectedWeek = useAtomValue(selectedWeekAtom);
   const setSelectedWeek = useSetAtom(selectedWeekAtom);
   const setDrawerOpen = useSetAtom(weekDrawerOpenAtom);

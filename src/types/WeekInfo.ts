@@ -4,7 +4,6 @@ export type WeekInfo = {
   title: string;
   summary: string;
   fetalGrowth: string;
-  fetalIllustration: string;
   purchases: {
     name: string;
     url: string;

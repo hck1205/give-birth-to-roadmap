@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import Tag from "../../common/Tag";
 import { formatWeekLabel } from "../../PregnancyRoadmap/PregnancyRoadmap.utils";
 import type { WeekInfo } from "../../../types/WeekInfo";
+import { getFetalIllustration } from "../../../utils/common/fetalIllustration";
+import { useInViewOnce } from "../../../utils/common/useInViewOnce";
 
 type WeekCardProps = {
   week: WeekInfo;
@@ -37,12 +39,38 @@ const TopRow = styled.div`
   align-items: center;
 `;
 
-const Illustration = styled.img`
+const Illustration = styled.div`
   width: 68px;
   height: 52px;
   border-radius: 12px;
-  object-fit: cover;
   border: 1px solid var(--border);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: var(--card);
+`;
+
+const IllustrationImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const IllustrationPlaceholder = styled.div`
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #e2e8f0, #f8fafc, #e2e8f0);
+  background-size: 200% 200%;
+  animation: shimmer 1.6s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 `;
 
 const Title = styled.h3`
@@ -65,10 +93,22 @@ const TagRow = styled.div`
 `;
 
 export default function WeekCard({ week, isActive, onSelect }: WeekCardProps) {
+  const { ref, inView } = useInViewOnce<HTMLDivElement>();
+
   return (
     <Card type="button" $active={isActive} onClick={() => onSelect(week.week)}>
       <TopRow>
-        <Illustration src={week.fetalIllustration} alt={`${week.week}주차 태아`} />
+        <Illustration ref={ref}>
+          {inView ? (
+            <IllustrationImage
+              src={getFetalIllustration(week.week, week.trimester)}
+              alt={`${week.week}주차 태아`}
+              loading="lazy"
+            />
+          ) : (
+            <IllustrationPlaceholder />
+          )}
+        </Illustration>
         <div>
           <Title>{week.title}</Title>
           <TagRow>

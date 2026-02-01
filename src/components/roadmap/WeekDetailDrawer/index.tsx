@@ -23,6 +23,7 @@ import {
 } from "../../PregnancyRoadmap/PregnancyRoadmap.utils";
 import { PurchaseLink, PurchaseList, PurchaseSection } from "./WeekDetailDrawer.styled";
 import type { PurchaseItem } from "./WeekDetailDrawer.types";
+import { getFetalIllustration } from "../../../utils/common/fetalIllustration";
 
 const renderPurchaseList = (items: PurchaseItem[]) => (
   <PurchaseList>
@@ -104,7 +105,7 @@ export default function WeekDetailDrawer() {
           <Box display="flex" gap={2} alignItems="center">
             <Box
               component="img"
-              src={activeWeek.fetalIllustration}
+              src={getFetalIllustration(activeWeek.week, activeWeek.trimester)}
               alt={`${activeWeek.week}주차 태아`}
               sx={{
                 width: 120,
