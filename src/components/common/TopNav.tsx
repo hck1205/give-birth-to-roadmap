@@ -49,6 +49,15 @@ export default function TopNav() {
       <NavButton to="/checklist">
         체크리스트
       </NavButton>
+      <NavButton to="/recovery">
+        산모 회복
+      </NavButton>
+      <NavButton to="/newborn-schedule">
+        신생아 일정
+      </NavButton>
+      <NavButton to="/faq">
+        FAQ
+      </NavButton>
       <NavButton to="/guestbook">
         방명록
       </NavButton>
