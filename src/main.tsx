@@ -65,6 +65,17 @@ const globalStyles = {
   "*": {
     boxSizing: "border-box",
   },
+  "*:focus-visible": {
+    outline: "2px solid var(--accent)",
+    outlineOffset: "2px",
+  },
+  "@media (prefers-reduced-motion: reduce)": {
+    "*": {
+      animation: "none !important",
+      transition: "none !important",
+      scrollBehavior: "auto !important",
+    },
+  },
 };
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

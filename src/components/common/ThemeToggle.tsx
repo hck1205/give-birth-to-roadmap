@@ -35,7 +35,12 @@ const Dot = styled.span<{ $active: boolean }>`
 
 export default function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
   return (
-    <Toggle type="button" onClick={onToggle} aria-pressed={theme === "dark"}>
+    <Toggle
+      type="button"
+      onClick={onToggle}
+      aria-pressed={theme === "dark"}
+      aria-label={`테마 전환: 현재 ${theme === "light" ? "라이트" : "다크"} 모드`}
+    >
       <Dot $active={theme === "light"} />
       {theme === "light" ? "라이트 모드" : "다크 모드"}
     </Toggle>

@@ -14,6 +14,7 @@ import {
   TagRow,
   Title,
   WeekSummary,
+  Disclaimer,
 } from "./PregnancyRoadmap.styled";
 import { getTrimesterLabel } from "./PregnancyRoadmap.utils";
 import { themeAtom } from "../../atom/themeAtom";
@@ -134,6 +135,14 @@ export default function PregnancyRoadmap() {
 
       <WeekDetailDrawer />
       <InfoDetailDrawer />
+
+      <SectionCard>
+        <SectionTitle>의료 정보 안내</SectionTitle>
+        <Disclaimer>
+          이 콘텐츠는 일반적인 정보 제공을 위한 참고 자료이며, 개인의 건강 상태나 의료적 판단을
+          대체하지 않습니다. 증상이나 진료가 필요하다고 느끼면 의료 전문가와 상담하세요.
+        </Disclaimer>
+      </SectionCard>
     </PageLayout>
   );
 }

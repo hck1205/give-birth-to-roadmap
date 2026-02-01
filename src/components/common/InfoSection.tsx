@@ -69,6 +69,7 @@ export default function InfoSection({
             <ItemButton
               type="button"
               onClick={() => onItemSelect?.(item)}
+              aria-label={`${title} 항목 상세 보기: ${item}`}
             >
               <ItemText>{item}</ItemText>
               <ItemHint>{itemSuffix}</ItemHint>

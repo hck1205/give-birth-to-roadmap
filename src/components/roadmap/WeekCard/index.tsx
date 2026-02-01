@@ -96,7 +96,13 @@ export default function WeekCard({ week, isActive, onSelect }: WeekCardProps) {
   const { ref, inView } = useInViewOnce<HTMLDivElement>();
 
   return (
-    <Card type="button" $active={isActive} onClick={() => onSelect(week.week)}>
+    <Card
+      type="button"
+      $active={isActive}
+      onClick={() => onSelect(week.week)}
+      aria-pressed={isActive}
+      aria-label={`${week.week}주차 선택`}
+    >
       <TopRow>
         <Illustration ref={ref}>
           {inView ? (

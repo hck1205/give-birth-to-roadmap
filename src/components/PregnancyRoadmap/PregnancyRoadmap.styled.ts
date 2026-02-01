@@ -49,3 +49,10 @@ export const TagRow = styled.div`
   flex-wrap: wrap;
   gap: 8px;
 `;
+
+export const Disclaimer = styled.p`
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+`;

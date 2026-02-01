@@ -54,6 +54,7 @@ export default function WeekDetailDrawer() {
       anchor="right"
       open={drawerOpen}
       onClose={() => setDrawerOpen(false)}
+      aria-labelledby="week-detail-title"
       PaperProps={{
         sx: {
           width: { xs: "100%", sm: 480 },
@@ -66,7 +67,9 @@ export default function WeekDetailDrawer() {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box display="flex" flexDirection="column" gap={1}>
           <Typography variant="h6" fontWeight={700}>
-            {activeWeek ? activeWeek.title : "주차를 선택하세요"}
+            <span id="week-detail-title">
+              {activeWeek ? activeWeek.title : "주차를 선택하세요"}
+            </span>
           </Typography>
           <Box display="flex" gap={1} flexWrap="wrap">
             <Tag>{getTrimesterLabel(selectedTrimester)}</Tag>

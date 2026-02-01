@@ -32,6 +32,7 @@ export default function InfoDetailDrawer() {
       anchor="right"
       open={open}
       onClose={() => setOpen(false)}
+      aria-labelledby="info-detail-title"
       PaperProps={{
         sx: {
           width: { xs: "100%", sm: 440 },
@@ -44,7 +45,9 @@ export default function InfoDetailDrawer() {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box display="flex" flexDirection="column" gap={1}>
           <Typography variant="h6" fontWeight={700}>
-            {detail ? detail.title : "정보를 선택하세요"}
+            <span id="info-detail-title">
+              {detail ? detail.title : "정보를 선택하세요"}
+            </span>
           </Typography>
           {detail ? <Tag>{categoryLabelMap[detail.category]}</Tag> : null}
         </Box>
