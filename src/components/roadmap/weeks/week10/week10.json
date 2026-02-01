@@ -1,0 +1,55 @@
+{
+  "week": 10,
+  "trimester": 1,
+  "title": "착상과 초기 변화 10주차",
+  "summary": "호르몬 변화가 빠르게 진행되는 시기라 몸의 반응을 세심하게 관찰해요.",
+  "fetalGrowth": "10주차: 얼굴과 팔다리 형태가 뚜렷해지고, 장기가 기능을 준비해요.",
+  "fetalIllustration": "data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22220%22%20height%3D%22140%22%20viewBox%3D%220%200%20220%20140%22%3E%0A%20%20%3Crect%20width%3D%22220%22%20height%3D%22140%22%20rx%3D%2224%22%20fill%3D%22%23fde2e4%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%2292%22%20cy%3D%2278%22%20rx%3D%2242%22%20ry%3D%2236%22%20fill%3D%22%23f9a8d4%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22138%22%20cy%3D%2264%22%20rx%3D%2228%22%20ry%3D%2224%22%20fill%3D%22%23f9a8d4%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%2252%22%20r%3D%228%22%20fill%3D%22%23fff%22%20opacity%3D%220.6%22%2F%3E%0A%20%20%3Ctext%20x%3D%2218%22%20y%3D%2230%22%20font-family%3D%22'Pretendard'%2C'Noto%20Sans%20KR'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22700%22%20fill%3D%22%239d174d%22%3EWeek%2010%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%2218%22%20y%3D%2254%22%20font-family%3D%22'Pretendard'%2C'Noto%20Sans%20KR'%2Csans-serif%22%20font-size%3D%2212%22%20fill%3D%22%239d174d%22%3E%ED%83%9C%EC%95%84%20%EC%84%B1%EC%9E%A5%20%EC%8A%A4%EB%83%85%EC%83%B7%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+  "needs": [
+    "입덧 및 피로 관리",
+    "기초 건강 상태 체크",
+    "휴식 루틴 확보"
+  ],
+  "preparation": [
+    "부부 건강 상담",
+    "산부인과 첫 방문 준비",
+    "엽산 섭취 시작",
+    "수면 패턴 조정"
+  ],
+  "nutrients": [
+    "엽산",
+    "비타민 B군",
+    "철분 소량"
+  ],
+  "tests": [
+    "기형아 선별 검사 안내",
+    "임신 확인 검사"
+  ],
+  "avoidFoods": [
+    "날생선",
+    "비살균 유제품",
+    "알코올"
+  ],
+  "recommendedExercises": [
+    "가벼운 스트레칭",
+    "짧은 산책"
+  ],
+  "purchases": [
+    {
+      "name": "엽산",
+      "url": "https://search.shopping.naver.com/search/all?query=%EC%97%BD%EC%82%B0"
+    },
+    {
+      "name": "임신 테스트기",
+      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%8B%A0%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B8%B0"
+    },
+    {
+      "name": "임산부 멀티비타민 (초기)",
+      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%82%B0%EB%B6%80%20%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC%20%EC%B4%88%EA%B8%B0"
+    },
+    {
+      "name": "임산부 바디필로우",
+      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%82%B0%EB%B6%80%20%EB%B0%94%EB%94%94%ED%95%84%EB%A1%9C%EC%9A%B0"
+    }
+  ]
+}

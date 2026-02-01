@@ -1,4 +1,4 @@
-import { WeekInfo } from "./pregnancyRoadmap";
+import type { WeekInfo } from "../../types/WeekInfo";
 
 export const getWeekInfoMap = (weeks: WeekInfo[]) => {
   return new Map(weeks.map((week) => [week.week, week]));

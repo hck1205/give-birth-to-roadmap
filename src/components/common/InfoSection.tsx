@@ -3,13 +3,13 @@ import styled from "@emotion/styled";
 const Title = styled.h4`
   margin: 0;
   font-size: 15px;
-  color: #e2e8f0;
+  color: var(--text);
 `;
 
 const List = styled.ul`
   margin: 8px 0 0;
   padding-left: 18px;
-  color: #cbd5f5;
+  color: var(--muted);
   display: grid;
   gap: 6px;
   font-size: 14px;

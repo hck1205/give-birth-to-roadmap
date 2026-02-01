@@ -1,11 +1,11 @@
 import { atom } from "jotai";
-import { pregnancyRoadmap } from "../utils/common/pregnancyRoadmap";
+import { weekDataList } from "../components/roadmap/weeks/data";
 import {
   filterWeeksByTrimester,
   getWeekInfoMap,
 } from "../utils/common/pregnancyRoadmap.utils";
 
-export const weeksAtom = atom(pregnancyRoadmap);
+export const weeksAtom = atom(weekDataList);
 export const selectedTrimesterAtom = atom<1 | 2 | 3 | "all">("all");
 export const selectedWeekAtom = atom<number | null>(null);
 export const weekDrawerOpenAtom = atom(false);
