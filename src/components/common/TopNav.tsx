@@ -46,6 +46,9 @@ export default function TopNav() {
       <NavButton to="/products">
         추천 상품
       </NavButton>
+      <NavButton to="/guestbook">
+        방명록
+      </NavButton>
     </Nav>
   );
 }
