@@ -1,50 +1,53 @@
-import { useMemo } from "react";
-import { useAtom } from "jotai";
+import { useEffect } from "react";
+import { useAtom, useAtomValue } from "jotai";
 import ActionButton from "./common/ActionButton";
 import PageLayout from "./common/PageLayout";
 import SectionCard from "./common/SectionCard";
 import Tag from "./common/Tag";
 import {
-  DetailPanel,
   FilterRow,
   Header,
-  SectionList,
   SectionTitle,
   Subtitle,
   SummaryGrid,
   TagRow,
   Title,
-  WeekCard,
-  WeekGrid,
   WeekSummary,
-  WeekTitle,
 } from "./PregnancyRoadmap.styled";
+import { getTrimesterLabel } from "./PregnancyRoadmap.utils";
 import {
-  buildWeekSections,
-  formatWeekLabel,
-  getTrimesterLabel,
-} from "./PregnancyRoadmap.utils";
-import {
-  filterWeeksByTrimester,
-  getWeekInfoMap,
-} from "../utils/common/pregnancyRoadmap.utils";
-import { PregnancyRoadmapProps } from "./PregnancyRoadmap.types";
-import { selectedTrimesterAtom, selectedWeekAtom } from "../atom/roadmapAtom";
+  activeWeekAtom,
+  filteredWeeksAtom,
+  selectedTrimesterAtom,
+  selectedWeekAtom,
+  weekDrawerOpenAtom,
+} from "../atom/roadmapAtom";
+import WeekFlow from "./roadmap/WeekFlow";
+import WeekDetailDrawer from "./roadmap/WeekDetailDrawer";
+import "reactflow/dist/style.css";
 
 const trimesterOptions: Array<1 | 2 | 3 | "all"> = ["all", 1, 2, 3];
 
-export default function PregnancyRoadmap({ weeks }: PregnancyRoadmapProps) {
+export default function PregnancyRoadmap() {
   const [selectedTrimester, setSelectedTrimester] = useAtom(
     selectedTrimesterAtom,
   );
   const [selectedWeek, setSelectedWeek] = useAtom(selectedWeekAtom);
+  const [, setDrawerOpen] = useAtom(weekDrawerOpenAtom);
+  const filteredWeeks = useAtomValue(filteredWeeksAtom);
+  const activeWeek = useAtomValue(activeWeekAtom);
 
-  const filteredWeeks = useMemo(
-    () => filterWeeksByTrimester(weeks, selectedTrimester),
-    [weeks, selectedTrimester],
-  );
-  const weekMap = useMemo(() => getWeekInfoMap(weeks), [weeks]);
-  const activeWeek = selectedWeek ? weekMap.get(selectedWeek) : filteredWeeks[0];
+  useEffect(() => {
+    if (!filteredWeeks.length) {
+      return;
+    }
+    const hasSelected = selectedWeek
+      ? filteredWeeks.some((week) => week.week === selectedWeek)
+      : false;
+    if (!hasSelected) {
+      setSelectedWeek(filteredWeeks[0].week);
+    }
+  }, [filteredWeeks, selectedWeek, setSelectedWeek]);
 
   return (
     <PageLayout>
@@ -52,9 +55,8 @@ export default function PregnancyRoadmap({ weeks }: PregnancyRoadmapProps) {
         <Header>
           <Title>임신 주차별 로드맵</Title>
           <Subtitle>
-            1주차부터 출산 직전까지 필요한 준비와 체크리스트를 주차별로
-            확인하세요. 원하는 분기를 선택하면 해당 로드맵만 모아볼 수
-            있습니다.
+            roadmap.sh/frontend 흐름처럼 단계별 진행 경로를 한눈에 확인하고,
+            주차를 클릭하면 오른쪽 메뉴에서 필요한 정보를 확인할 수 있어요.
           </Subtitle>
         </Header>
       </SectionCard>
@@ -82,9 +84,7 @@ export default function PregnancyRoadmap({ weeks }: PregnancyRoadmapProps) {
           <TagRow>
             <Tag>{getTrimesterLabel(selectedTrimester)}</Tag>
             <Tag>
-              {activeWeek
-                ? `${activeWeek.week}주차`
-                : "주차를 선택하세요"}
+              {activeWeek ? `${activeWeek.week}주차` : "주차를 선택하세요"}
             </Tag>
           </TagRow>
         </SectionCard>
@@ -96,45 +96,30 @@ export default function PregnancyRoadmap({ weeks }: PregnancyRoadmapProps) {
               : "주차를 선택하면 요약이 표시됩니다."}
           </WeekSummary>
         </SectionCard>
+        <SectionCard>
+          <SectionTitle>주차 선택 안내</SectionTitle>
+          <WeekSummary>
+            로드맵 카드 혹은 플로우 노드를 클릭하면 오른쪽 패널이 열려 상세
+            준비 사항을 확인할 수 있습니다.
+          </WeekSummary>
+          <ActionButton onClick={() => setDrawerOpen(true)}>
+            선택한 주차 보기
+          </ActionButton>
+        </SectionCard>
       </SummaryGrid>
 
-      <WeekGrid>
-        {filteredWeeks.map((week) => (
-          <WeekCard
-            key={week.week}
-            type="button"
-            data-active={week.week === activeWeek?.week}
-            onClick={() => setSelectedWeek(week.week)}
-          >
-            <WeekTitle>{week.title}</WeekTitle>
-            <TagRow>
-              <Tag>{formatWeekLabel(week)}</Tag>
-            </TagRow>
-            <WeekSummary>{week.summary}</WeekSummary>
-          </WeekCard>
-        ))}
-      </WeekGrid>
+      <SectionCard>
+        <Header>
+          <SectionTitle>주차별 로드맵 플로우</SectionTitle>
+          <WeekSummary>
+            주차별 준비 과정이 순서대로 연결됩니다. 원하는 주차를 선택해 세부
+            정보를 확인하세요.
+          </WeekSummary>
+        </Header>
+        <WeekFlow />
+      </SectionCard>
 
-      {activeWeek && (
-        <SectionCard>
-          <DetailPanel>
-            <Header>
-              <SectionTitle>{activeWeek.title} 상세</SectionTitle>
-              <WeekSummary>{activeWeek.summary}</WeekSummary>
-            </Header>
-            {buildWeekSections(activeWeek).map((section) => (
-              <div key={section.title}>
-                <SectionTitle>{section.title}</SectionTitle>
-                <SectionList>
-                  {section.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </SectionList>
-              </div>
-            ))}
-          </DetailPanel>
-        </SectionCard>
-      )}
+      <WeekDetailDrawer />
     </PageLayout>
   );
 }
