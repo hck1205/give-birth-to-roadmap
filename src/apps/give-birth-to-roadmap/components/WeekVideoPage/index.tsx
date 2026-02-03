@@ -303,6 +303,80 @@ export default function WeekVideoPage() {
                         />
                       </VideoPartnerGrid>
                     )}
+                    {group.id === "weeks-5-8" && (
+                      <VideoPartnerGrid>
+                        <a
+                          href="https://link.coupang.com/a/dFyO1Q"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image8.coupangcdn.com/image/affiliate/banner/8993c514d03a466c062f7de36f077451@2x.jpg"
+                            alt="하루웰빙 슈퍼 프리 프로바이오틱스, 60g, 6개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dFySJp"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image11.coupangcdn.com/image/affiliate/banner/c85e91d7edae81858212f146d5ede6c4@2x.jpg"
+                            alt="LG전자 퓨리케어 360도 공기청정기 62㎡, AS183HWWA, 화이트"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dFyUeb"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image14.coupangcdn.com/image/affiliate/banner/9be31c4eda9346fefe445acf07e3232e@2x.jpg"
+                            alt="종근당 차전자피 식이섬유 30개입, 204g, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dFyU51"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img1c.coupangcdn.com/image/affiliate/banner/c184137c5d8742540688aa44f7425609@2x.jpg"
+                            alt="웰꼼베베 닥터맘스 액상 철분, 600ml, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dFyVzk"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img1a.coupangcdn.com/image/affiliate/banner/a3ee2211f086a7d88a615c5aa333e6ca@2x.jpg"
+                            alt="맘스포뮬러 칼마디 임산부 수유부 칼슘 마그네슘 비타민D 칼슘제, 2개, 90정"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                      </VideoPartnerGrid>
+                    )}
                   </WeekBlock>
                 )}
               </WeekGroup>

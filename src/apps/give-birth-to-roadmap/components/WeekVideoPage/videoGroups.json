@@ -56,11 +56,44 @@
       1
     ],
     "title": "5~8주차",
-    "videos": [],
+    "videos": [
+      {
+        "title": "5~8주차 관련 영상 1",
+        "url": "https://www.youtube.com/watch?v=U5YA6f7ZDv4"
+      },
+      {
+        "title": "5~8주차 관련 영상 2",
+        "url": "https://www.youtube.com/watch?v=abtauaIi4Ho"
+      },
+      {
+        "title": "5~8주차 관련 영상 3",
+        "url": "https://www.youtube.com/watch?v=jpbUxXcbPhk"
+      },
+      {
+        "title": "5~8주차 관련 영상 4",
+        "url": "https://www.youtube.com/watch?v=Qx_y1rTmEl4"
+      },
+      {
+        "title": "5~8주차 관련 영상 5",
+        "url": "https://www.youtube.com/watch?v=zUoxv-qADLM"
+      },
+      {
+        "title": "5~8주차 관련 영상 6",
+        "url": "https://www.youtube.com/watch?v=7hvGsYl8Y_Y"
+      },
+      {
+        "title": "5~8주차 관련 영상 7",
+        "url": "https://www.youtube.com/watch?v=SlD7fujJhV0"
+      },
+      {
+        "title": "5~8주차 관련 영상 8",
+        "url": "https://www.youtube.com/watch?v=hgj1bcEmeNc"
+      }
+    ],
     "products": [
       {
-        "name": "추천 상품 1",
-        "url": "https://link.coupang.com/a/REPLACE_ME"
+        "name": "쿠팡 파트너스 추천 상품",
+        "url": "https://link.coupang.com/a/dFyNx1"
       },
       {
         "name": "추천 상품 2",
