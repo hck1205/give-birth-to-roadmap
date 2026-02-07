@@ -377,6 +377,122 @@ export default function WeekVideoPage() {
                         </a>
                       </VideoPartnerGrid>
                     )}
+                    {group.id === "weeks-9-12" && (
+                      <VideoPartnerGrid>
+                        <a
+                          href="https://link.coupang.com/a/dHLiRV"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image7.coupangcdn.com/image/affiliate/banner/89bb99da3b10037198d9d8d201d2a9b7@2x.jpg"
+                            alt="MOZ 스웨덴 나혼자산다 보온병 포스코 316 스텐 대용량 원터치 손잡이 보온보냉병 보온텀블러, 포레스트그린, 1300ml, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLlJN"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img3a.coupangcdn.com/image/affiliate/banner/0189502c2cac0856e036621e8e4f3a34@2x.jpg"
+                            alt="일리윤 세라마이드 아토 6.0 탑투토 바디워시 무향, 500ml, 2개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLmGZ"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image5.coupangcdn.com/image/affiliate/banner/d26492be762935f0797e93e3e338ee20@2x.jpg"
+                            alt="일리윤 세라마이드 아토 대용량 바디로션, 800ml, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLosp"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image8.coupangcdn.com/image/affiliate/banner/13c333ff738159cb8d05572f5526d13b@2x.jpg"
+                            alt="마더케이 디아 세탁세제, 1L, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLpfq"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img4a.coupangcdn.com/image/affiliate/banner/6b6aa49f7905c460f469d9beda984c1b@2x.jpg"
+                            alt="뉴트맘스 올인원, 60정, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLqs4"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image6.coupangcdn.com/image/affiliate/banner/bb448ed078b7b89969da164388f496ff@2x.jpg"
+                            alt="맘스포뮬러 식물성 초임계 알티지 rTG 오메가3 미니캡슐 DHA 2개월분, 1개, 60정"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLtzd"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image12.coupangcdn.com/image/affiliate/banner/813807fcd8b5512cab6e198d98826dcd@2x.jpg"
+                            alt="쿠폰할인 중 임산부 바디필로우 J자형 허리보호 긴배게 출산선물 추천, 그린"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHLwSq"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image12.coupangcdn.com/image/affiliate/banner/dee23d8f03c97086a5f7e95361eeeeb4@2x.jpg"
+                            alt="안국약품 푸룬 식이섬유 젤리, 280g, 4개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                      </VideoPartnerGrid>
+                    )}
                   </WeekBlock>
                 )}
               </WeekGroup>
@@ -387,7 +503,7 @@ export default function WeekVideoPage() {
           anchor="right"
           open={drawerOpen}
           onClose={() => setDrawerOpen(false)}
-          PaperProps={{ sx: { width: { xs: "100%", sm: 420 } } }}
+          PaperProps={{ sx: { width: { xs: "100%", sm: 630 } } }}
         >
           <VideoDrawerContent>
             <VideoDrawerHeader>
