@@ -493,6 +493,104 @@ export default function WeekVideoPage() {
                         </a>
                       </VideoPartnerGrid>
                     )}
+                    {group.id === "weeks-13-16" && (
+                      <VideoPartnerGrid>
+                        <a
+                          href="https://link.coupang.com/a/dHMA6l"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img3a.coupangcdn.com/image/affiliate/banner/520a743535fbaae45aed55cc71fb9cd5@2x.jpg"
+                            alt="만성 비염 알레르기 비염 부비강 부비동코막힘 콧물 예민한 코에 효과 적인 천연 영양제 48정, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHMCwK"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img2c.coupangcdn.com/image/affiliate/banner/5ff90929201408c08196427ac089c9c9@2x.jpg"
+                            alt="아이유베개 경추베개 갚은잠 베개, 화이트, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHMD48"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img4c.coupangcdn.com/image/affiliate/banner/dd86fe81eb0caa94430933f6af43babc@2x.jpg"
+                            alt="뉴트리원 건강한 요로엔 크랜베리, 60정, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHMFhA"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image4.coupangcdn.com/image/affiliate/banner/6128eb6bd8f50a38295717343bed434a@2x.jpg"
+                            alt="Now Foods 칸디다 서포트 베지 캡슐, 90정, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <a
+                          href="https://link.coupang.com/a/dHMGoo"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://image5.coupangcdn.com/image/affiliate/banner/5722b8e236f654e71ac134fbf4e26ac4@2x.jpg"
+                            alt="방방곳곳 잇몸 시린이 임산부 입냄새 구취제거 구내염 잇몸에 좋은 편림치드치약 편림오일치약, 120g, 6개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                        <iframe
+                          src="https://coupa.ng/clyp2z"
+                          width="120"
+                          height="240"
+                          frameBorder="0"
+                          scrolling="no"
+                          referrerPolicy="unsafe-url"
+                          browsingtopics
+                          title="쿠팡 파트너스 배너"
+                        />
+                        <a
+                          href="https://link.coupang.com/a/dHMJTF"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          referrerPolicy="unsafe-url"
+                        >
+                          <img
+                            src="https://img1a.coupangcdn.com/image/affiliate/banner/fab3a099697e48f4a39e13ef88aa298c@2x.jpg"
+                            alt="락토핏 맘스 생유산균, 120g, 1개"
+                            width={120}
+                            height={240}
+                            loading="lazy"
+                          />
+                        </a>
+                      </VideoPartnerGrid>
+                    )}
                   </WeekBlock>
                 )}
               </WeekGroup>
